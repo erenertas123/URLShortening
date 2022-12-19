@@ -177,17 +177,6 @@ namespace URLShortening.Controllers
             return NoContent();
         }
 
-
-        [HttpPut]
-        public async Task<ActionResult<URL>> UpdateShortUrl(int id)
-        {
-           var url = _context.Urls.FindAsync(id);
-
-
-
-            return Ok();
-        }
-
         private bool URLExists(int id)
         {
             return _context.Urls.Any(e => e.Id == id);
